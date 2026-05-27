@@ -10,7 +10,7 @@ test.describe('Login Tests', () => {
     // Completar formulario de login con datos de test-data.json
     await page.fill('#user-name', testData.usuarios.standard.username);
     await page.fill('#password', testData.usuarios.standard.password);
-    await page.click('#ingresar-button');
+    await page.click('#login-button');
 
     // Verificar que redirige a /inventory.html
     await expect(page).toHaveURL(/.*inventory\.html/);
